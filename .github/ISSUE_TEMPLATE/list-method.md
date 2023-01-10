@@ -1,7 +1,7 @@
 ---
-name: Custom issue template
+name: List Method
 about: 'For Milestone #5'
-title: Write Retrieve Method for Default_Recipes
+title: Write List Method for Default_Recipes
 labels: ''
 assignees: Massacre-Saint
 
