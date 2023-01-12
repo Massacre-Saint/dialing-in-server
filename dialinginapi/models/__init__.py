@@ -7,3 +7,4 @@ from .method_equipment import MethodEquipment
 from .recipe_equipment import RecipeEquipment
 from .step import Step
 from .user import User
+from .owner import Owner

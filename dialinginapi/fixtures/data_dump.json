@@ -1,0 +1,119 @@
+[
+  {
+    "model": "dialinginapi.method",
+    "pk": 1,
+    "fields": {
+      "image_url": "https://gistcdn.githack.com/Massacre-Saint/9cc67d020a016a5fe19456462ad04823/raw/efe49cac85ed0a0851ff359984c94551f01e4e42/moka.svg",
+      "description": "The Moka Pot is a stovetop coffee maker used to make espresso-like coffee. It uses boiling water to force steam through the coffee grounds, so the coffee bubbles up into the pot versus percolating down like in brewed coffeeest",
+      "name": "Moka Pot",
+      "dose_min": null,
+      "dose_max": null,
+      "weight_max": null
+    }
+  },
+  {
+    "model":"dialinginapi.recipe",
+    "pk": 1,
+    "fields": {
+      "brew_time": 180,
+      "grind_id": 1,
+      "weight": 345,
+      "dose": 20,
+      "method_id": 1,
+      "recipe_name": "Bialetti 6 Cup",
+      "water_temp": 32,
+      "default": true,
+      "published": true
+    }
+  },
+  {
+    "model":"dialinginapi.recipe",
+    "pk": 2,
+    "fields": {
+      "brew_time": 180,
+      "grind_id": 1,
+      "weight": 800,
+      "dose": 50,
+      "method_id": 1,
+      "recipe_name": "My Go To",
+      "water_temp": 212,
+      "default": false,
+      "published": true
+    }
+  },
+  {
+    "model":"dialinginapi.recipeequipment",
+    "pk": 1,
+    "fields": {
+      "type": "Grinder",
+      "name": "EK",
+      "recipe_id": 1,
+      "setting": "6.8"
+    }
+  },
+  {
+    "model":"dialinginapi.methodequipment",
+    "pk": 1,
+    "fields": {
+      "type": "Any",
+      "name": "Stove",
+      "method_id": 1
+    }
+  },
+  {
+    "model":"dialinginapi.grind",
+    "pk": 1,
+    "fields": {
+      "grind_size": "Fine",
+      "image_url": "https://www.homegrounds.co/wp-content/uploads/2019/08/Grind-fine-section-edited-copy.png",
+      "order": 2
+    }
+  },
+  {
+    "model":"dialinginapi.step",
+    "pk": 1,
+    "fields": {
+      "description": "Grind about 20 grams of coffee finer than you would for a pour over",
+      "recipe_id": 1,
+      "order": 1
+    }
+  },
+  {
+    "model":"dialinginapi.step",
+    "pk": 2,
+    "fields": {
+      "description":"Fill the bottom chamber of the moka pot with water until it is level with the valve, about 345 grams. Place the funnel—the coffee grounds receptacle—into the pot. If any water enters the funnel, pour out the excess and replace the funnel.",
+      "recipe_id": 1,
+      "order": 2
+    }
+  },
+  {
+    "model":"dialinginapi.user",
+    "pk": 1,
+    "fields": {
+      "uid": "QvokCqe9RMZIoTcn7oPm5FbVDUy2",
+      "method_id": 1,
+      "fav_roast": "Medium",
+      "fav_shop": "Crema",
+      "description": "This is a test account.",
+      "image_url": "https://lh3.googleusercontent.com/a-/AFdZucpDUWCoE0c_IhrZeoXtfk-og3PMYT9E9lCdhyKE2g=s96-c",
+      "name": "Jacob Martin"
+    }
+  },
+  {
+    "model": "dialinginapi.owner",
+    "pk": 1,
+    "fields": {
+      "recipe_id": 2,
+      "user_id": 1
+    }
+  },
+  {
+    "model": "dialinginapi.favorite",
+    "pk": 1,
+    "fields": {
+      "recipe_id": 2,
+      "user_id": 1
+    }
+  }
+]
