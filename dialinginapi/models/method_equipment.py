@@ -6,4 +6,4 @@ class MethodEquipment(models.Model):
     """CLass defines Django Model of Method Equipment"""
     type = models.CharField(max_length=150)
     name = models.CharField(max_length=150)
-    method = models.ForeignKey(Method, on_delete=models.CASCADE)
+    method_id = models.ForeignKey(Method, on_delete=models.CASCADE)
