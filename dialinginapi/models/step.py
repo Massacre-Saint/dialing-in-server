@@ -1,8 +1,9 @@
+"""Module creates class Steo"""
 from django.db import models
-from models import UserRecipe, DefaultRecipe
+from .recipe import Recipe
 
 class Step(models.Model):
-  description = models.CharField(max_length=250)
-  user_recipe = models.ForeignKey(UserRecipe, on_delete= models.CASCADE)
-  default_recipe = models.ForeignKey(DefaultRecipe, on_delete= models.CASCADE)
-  order = models.PositiveIntegerField()
+    """Class defines DJango ORM model Step"""
+    description = models.CharField(max_length=250)
+    recipe = models.ForeignKey(Recipe, on_delete=models.CASCADE)
+    order = models.PositiveIntegerField()
