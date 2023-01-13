@@ -1,0 +1,142 @@
+[
+  {
+    "model":"dialinginapi.recipe",
+    "pk": 1,
+    "fields": {
+      "brew_time": 180,
+      "grind_id": 1,
+      "weight": 345,
+      "dose": 20,
+      "method_id": 1,
+      "recipe_name": "Bialetti 6 Cup",
+      "default": true,
+      "published": true
+    }
+  },
+  {
+    "model":"dialinginapi.recipe",
+    "pk": 2,
+    "fields": {
+      "brew_time": 200,
+      "grind_id": 3,
+      "weight": 234,
+      "dose": 11,
+      "method_id": 2,
+      "recipe_name": "James Hoffman: Short & Strong",
+      "default": true,
+      "published": true
+    }
+  },
+  {
+    "model":"dialinginapi.recipe",
+    "pk": 3,
+    "fields": {
+      "brew_time": 240,
+      "grind_id": 6,
+      "weight": 400,
+      "dose": 27,
+      "method_id": 3,
+      "recipe_name": "Standard Ratio",
+      "default": true,
+      "published": true
+    }
+  },
+  {
+    "model":"dialinginapi.recipe",
+    "pk": 4,
+    "fields": {
+      "brew_time": 180,
+      "grind_id": 4,
+      "weight": 680,
+      "dose": 40,
+      "method_id": 4,
+      "recipe_name": "Frothy Monkey Guide",
+      "default": true,
+      "published": true
+    }
+  },
+  {
+    "model":"dialinginapi.recipe",
+    "pk": 5,
+    "fields": {
+      "brew_time": 240,
+      "grind_id": 6,
+      "weight": 946,
+      "dose": 63,
+      "method_id": 5,
+      "recipe_name": "4-cup Serving",
+      "default": true,
+      "published": true
+    }
+  },
+  {
+    "model":"dialinginapi.recipe",
+    "pk": 6,
+    "fields": {
+      "brew_time": 180,
+      "grind_id": 3,
+      "weight": 400,
+      "dose": 26,
+      "method_id": 6,
+      "recipe_name": "Frothy Monkey Guide",
+      "default": true,
+      "published": true
+    }
+  },
+  {
+    "model":"dialinginapi.recipe",
+    "pk": 7,
+    "fields": {
+      "brew_time": 240,
+      "grind_id": 2,
+      "weight": 360,
+      "dose": 21,
+      "method_id": 7,
+      "recipe_name": "Stumptown Coffee's Method",
+      "default": true,
+      "published": true
+    }
+  },
+  {
+    "model":"dialinginapi.recipe",
+    "pk": 8,
+    "fields": {
+      "brew_time": 36000,
+      "grind_id": 7,
+      "weight": 1899,
+      "dose": 340,
+      "method_id": 8,
+      "recipe_name": "Toddy: At Home",
+      "default": true,
+      "published": true
+    }
+  },
+  {
+    "model":"dialinginapi.recipe",
+    "pk": 9,
+    "fields": {
+      "brew_time": 300,
+      "grind_id": 4,
+      "weight": 960,
+      "dose": 60,
+      "method_id": 9,
+      "recipe_name": "4 cup Auto Drip",
+      "default": true,
+      "published": true
+    }
+  },
+  {
+    "model":"dialinginapi.recipe",
+    "pk": 9,
+    "fields": {
+      "brew_time": 320,
+      "grind_id": 1,
+      "weight": 120,
+      "dose": 14,
+      "method_id": 10,
+      "recipe_name": "Traditional Method",
+      "default": true,
+      "published": true
+    }
+  }
+]

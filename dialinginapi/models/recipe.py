@@ -12,6 +12,5 @@ class Recipe(models.Model):
     dose = models.PositiveIntegerField()
     method_id = models.ForeignKey(Method, on_delete= models.CASCADE)
     recipe_name = models.CharField(max_length=35)
-    water_temp = models.PositiveIntegerField()
     default = models.BooleanField()
     published = models.BooleanField()
