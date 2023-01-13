@@ -1,0 +1,245 @@
+[
+  {
+    "model":"dialinginapi.methodequipment",
+    "pk": 1,
+    "fields": {
+      "type": "Any",
+      "name": "Stove",
+      "method_id": 1
+    }
+  },
+  {
+    "model":"dialinginapi.methodequipment",
+    "pk": 2,
+    "fields": {
+      "type": "Cold",
+      "name": "Water",
+      "method_id": 1
+    }
+  },
+  {
+    "model":"dialinginapi.methodequipment",
+    "pk": 3,
+    "fields": {
+      "type": "Paper",
+      "name": "AeroPress Filter",
+      "method_id": 2
+    }
+  },
+  {
+    "model":"dialinginapi.methodequipment",
+    "pk": 4,
+    "fields": {
+      "type": "Digital",
+      "name": "Scale",
+      "method_id": 2
+    }
+  },
+  {
+    "model":"dialinginapi.methodequipment",
+    "pk": 5,
+    "fields": {
+      "type": "Any",
+      "name": "Kettle",
+      "method_id": 2
+    }
+  },
+  {
+    "model":"dialinginapi.methodequipment",
+    "pk": 6,
+    "fields": {
+      "type": "Utensil",
+      "name": "Spoon",
+      "method_id": 3
+    }
+  },
+  {
+    "model":"dialinginapi.methodequipment",
+    "pk": 7,
+    "fields": {
+      "type": "Digital",
+      "name": "Scale",
+      "method_id": 3
+    }
+  },
+  {
+    "model":"dialinginapi.methodequipment",
+    "pk": 8,
+    "fields": {
+      "type": "Any",
+      "name": "Kettle",
+      "method_id": 3
+    }
+  },
+  {
+    "model":"dialinginapi.methodequipment",
+    "pk": 9,
+    "fields": {
+      "type": "Paper",
+      "name": "Chemex Filter",
+      "method_id": 4
+    }
+  },
+  {
+    "model":"dialinginapi.methodequipment",
+    "pk": 10,
+    "fields": {
+      "type": "Digital",
+      "name": "Scale",
+      "method_id": 4
+    }
+  },
+  {
+    "model":"dialinginapi.methodequipment",
+    "pk": 11,
+    "fields": {
+      "type": "Utensil",
+      "name": "Spoon",
+      "method_id": 4
+    }
+  },
+  {
+    "model":"dialinginapi.methodequipment",
+    "pk": 12,
+    "fields": {
+      "type": "Gooseneck",
+      "name": "Kettle",
+      "method_id": 4
+    }
+  },
+  {
+    "model":"dialinginapi.methodequipment",
+    "pk": 13,
+    "fields": {
+      "type": "Measuring",
+      "name": "Spoon",
+      "method_id": 5
+    }
+  },
+  {
+    "model":"dialinginapi.methodequipment",
+    "pk": 14,
+    "fields": {
+      "type": "Gooseneck",
+      "name": "Kettle",
+      "method_id": 6
+    }
+  },
+  {
+    "model":"dialinginapi.methodequipment",
+    "pk": 15,
+    "fields": {
+      "type": "Paper",
+      "name": "Kalita 185 Filter",
+      "method_id": 6
+    }
+  },
+  {
+    "model":"dialinginapi.methodequipment",
+    "pk": 16,
+    "fields": {
+      "type": "Digital",
+      "name": "Scale",
+      "method_id": 6
+    }
+  },
+  {
+    "model":"dialinginapi.methodequipment",
+    "pk": 17,
+    "fields": {
+      "type": "Paper",
+      "name": "V60 Filter",
+      "method_id": 7
+    }
+  },
+  {
+    "model":"dialinginapi.methodequipment",
+    "pk": 18,
+    "fields": {
+      "type": "Digital",
+      "name": "Scale",
+      "method_id": 7
+    }
+  },
+  {
+    "model":"dialinginapi.methodequipment",
+    "pk": 19,
+    "fields": {
+      "type": "Utensil",
+      "name": "Spoon",
+      "method_id": 7
+    }
+  },
+  {
+    "model":"dialinginapi.methodequipment",
+    "pk": 20,
+    "fields": {
+      "type": "Gooseneck",
+      "name": "Kettle",
+      "method_id": 7
+    }
+  },
+  {
+    "model":"dialinginapi.methodequipment",
+    "pk": 21,
+    "fields": {
+      "type": "Digital",
+      "name": "Scale",
+      "method_id": 8
+    }
+  },
+  {
+    "model":"dialinginapi.methodequipment",
+    "pk": 22,
+    "fields": {
+      "type": "Utensil",
+      "name": "Spoon",
+      "method_id": 8
+    }
+  },
+  {
+    "model":"dialinginapi.methodequipment",
+    "pk": 23,
+    "fields": {
+      "type": "Paper",
+      "name": "Filter",
+      "method_id": 9
+    }
+  },
+  {
+    "model":"dialinginapi.methodequipment",
+    "pk": 24,
+    "fields": {
+      "type": "Digital",
+      "name": "Scale",
+      "method_id": 9
+    }
+  },
+  {
+    "model":"dialinginapi.methodequipment",
+    "pk": 25,
+    "fields": {
+      "type": "Digital",
+      "name": "Scale",
+      "method_id": 10
+    }
+  },
+  {
+    "model":"dialinginapi.methodequipment",
+    "pk": 26,
+    "fields": {
+      "type": "Specality pot",
+      "name": "Cezve",
+      "method_id": 10
+    }
+  },
+  {
+    "model":"dialinginapi.methodequipment",
+    "pk": 27,
+    "fields": {
+      "type": "Measuring",
+      "name": "Sppon",
+      "method_id": 10
+    }
+  }
+]
