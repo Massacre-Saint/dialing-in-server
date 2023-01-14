@@ -127,7 +127,7 @@
   },
   {
     "model":"dialinginapi.recipe",
-    "pk": 9,
+    "pk": 10,
     "fields": {
       "brew_time": 320,
       "grind_id": 1,
