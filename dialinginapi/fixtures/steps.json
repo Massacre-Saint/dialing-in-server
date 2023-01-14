@@ -1,0 +1,695 @@
+[
+  {
+    "model":"dialinginapi.step",
+    "pk": 1,
+    "fields": {
+      "description": "Grind about 20 grams of coffee finer than you would for a pour over",
+      "recipe_id": 1,
+      "order": 1
+    }
+  },
+  {
+    "model":"dialinginapi.step",
+    "pk": 2,
+    "fields": {
+      "description": "Fill the bottom chamber of the moka pot with water until it is level with the valve, about 345 grams. Place the funnel—the coffee grounds receptacle—into the pot. If any water enters the funnel, pour out the excess and replace the funnel.",
+      "recipe_id": 1,
+      "order": 2
+    }
+  },
+  {
+    "model":"dialinginapi.step",
+    "pk": 3,
+    "fields": {
+      "description": "Fill the funnel with the ground coffee, leveling the grounds and wiping the frim clean. Do not tamp the grounds.",
+      "recipe_id": 1,
+      "order": 3
+    }
+  },
+  {
+    "model":"dialinginapi.step",
+    "pk": 4,
+    "fields": {
+      "description": "Screw the moka pot top on tightly.",
+      "recipe_id": 1,
+      "order": 4
+    }
+  },
+  {
+    "model":"dialinginapi.step",
+    "pk": 5,
+    "fields": {
+      "description": "Place the moka pot on a stove over medium heat. If using a gas stove, make sure the flame is not larger than the base of the pot so as not to expose the handle to heat.",
+      "recipe_id": 1,
+      "order": 5
+    }
+  },
+  {
+    "model":"dialinginapi.step",
+    "pk": 6,
+    "fields": {
+      "description": "Immediately remove the moka pot from the heat when you hear a hissing, gurgling sound. Let the coffee finish flowing into the upper chamber.",
+      "recipe_id": 1,
+      "order": 6
+    }
+  },
+  {
+    "model":"dialinginapi.step",
+    "pk": 7,
+    "fields": {
+      "description": "Set brewer in standard position on a server. Don't rinse or preheat the brewer (it doesn't make any difference).",
+      "recipe_id": 2,
+      "order": 1
+    }
+  },
+  {
+    "model":"dialinginapi.step",
+    "pk": 8,
+    "fields": {
+      "description": "Start a timer, add 200mL water, aiming to wet all the coffee during pouring.",
+      "recipe_id": 2,
+      "order": 2
+    }
+  },
+  {
+    "model":"dialinginapi.step",
+    "pk": 9,
+    "fields": {
+      "description": "Then immediately place the plunger on top of the brewer, about 1cm in. This creates a vacuum to stop the coffee from dripping through.",
+      "recipe_id": 2,
+      "order": 3
+    }
+  },
+  {
+    "model":"dialinginapi.step",
+    "pk": 10,
+    "fields": {
+      "description": "Wait 2 minutes.",
+      "recipe_id": 2,
+      "order": 4
+    }
+  },
+  {
+    "model":"dialinginapi.step",
+    "pk": 11,
+    "fields": {
+      "description": "Holding the brewer and the plunger, gently swirl the brewer.",
+      "recipe_id": 2,
+      "order": 5
+    }
+  },
+  {
+    "model":"dialinginapi.step",
+    "pk": 12,
+    "fields": {
+      "description": "Wait 30 seconds.",
+      "recipe_id": 2,
+      "order": 6
+    }
+  },
+  {
+    "model":"dialinginapi.step",
+    "pk": 13,
+    "fields": {
+      "description": "Press gently all the way, it takes about 30 seconds.",
+      "recipe_id": 2,
+      "order": 7
+    }
+  },
+  {
+    "model":"dialinginapi.step",
+    "pk": 14,
+    "fields": {
+      "description": "Discard puck by simply unscrewing cap, then pushing the plunger",
+      "recipe_id": 2,
+      "order": 8
+    }
+  },
+  {
+    "model":"dialinginapi.step",
+    "pk": 15,
+    "fields": {
+      "description": "Preheat your press with hot water, including the plunger, then pour hot water into your cup. Meanwhile, measure 5 tablespoons or 27 grams of coffee and grind. It should have the consistency of kosher salt.",
+      "recipe_id": 3,
+      "order": 1
+    }
+  },
+  {
+    "model":"dialinginapi.step",
+    "pk": 16,
+    "fields": {
+      "description": "Tip your coffee into the press and give it a gentle shake to level the grounds",
+      "recipe_id": 3,
+      "order": 2
+    }
+  },
+  {
+    "model":"dialinginapi.step",
+    "pk": 17,
+    "fields": {
+      "description": "Starting the timer, add water in a circular motion, wetting all the grounds, until the press is half full. Pause and enjoy the bloom.",
+      "recipe_id": 3,
+      "order": 3
+    }
+  },
+  {
+    "model":"dialinginapi.step",
+    "pk": 18,
+    "fields": {
+      "description": "30 seconds in, give the grounds a gentle stir with a chopstick or spoon.",
+      "recipe_id": 3,
+      "order": 4
+    }
+  },
+  {
+    "model":"dialinginapi.step",
+    "pk": 19,
+    "fields": {
+      "description": "Evenly pour water to the top of the press and add the lid, gently resting the plunger on the grounds. (If you're using a kitchen scale, it should come to around 400g of water altogether).",
+      "recipe_id": 3,
+      "order": 5
+    }
+  },
+  {
+    "model":"dialinginapi.step",
+    "pk": 20,
+    "fields": {
+      "description": "Wait until your timer reads 4:00, then slowly push the plunger all the way down",
+      "recipe_id": 3,
+      "order": 6
+    }
+  },
+  {
+    "model":"dialinginapi.step",
+    "pk": 21,
+    "fields": {
+      "description": "Immediately decant the coffee to prevent over-extraction.",
+      "recipe_id": 3,
+      "order": 7
+    }
+  },
+  {
+    "model":"dialinginapi.step",
+    "pk": 22,
+    "fields": {
+      "description": "Enjoy with friends, by yourself, or with the dog.",
+      "recipe_id": 3,
+      "order": 8
+    }
+  },
+  {
+    "model":"dialinginapi.step",
+    "pk": 23,
+    "fields": {
+      "description": "Place the filter in the Chemex, make sure the three-layered side of the filter is towards the spout to prevent the filter from being sucked into the spout.",
+      "recipe_id": 4,
+      "order": 1
+    }
+  },
+  {
+    "model":"dialinginapi.step",
+    "pk": 24,
+    "fields": {
+      "description": "Heat Chemex and filter by pouring hot water through them both; this will also help reduce the flavor imparted by the paper.",
+      "recipe_id": 4,
+      "order": 2
+    }
+  },
+  {
+    "model":"dialinginapi.step",
+    "pk": 25,
+    "fields": {
+      "description": "Pour the water out of the back of the Chemex, while leaving the filter in place",
+      "recipe_id": 4,
+      "order": 3
+    }
+  },
+  {
+    "model":"dialinginapi.step",
+    "pk": 26,
+    "fields": {
+      "description": "Weigh out ~40 g of your favorite coffee and grind about the size of coarse sea salt.",
+      "recipe_id": 4,
+      "order": 4
+    }
+  },
+  {
+    "model":"dialinginapi.step",
+    "pk": 27,
+    "fields": {
+      "description": "Fill up gooseneck kettle with 195-205 degree water (wait 30 seconds after boiling).",
+      "recipe_id": 4,
+      "order": 5
+    }
+  },
+  {
+    "model":"dialinginapi.step",
+    "pk": 28,
+    "fields": {
+      "description": "Place Chemex with the filter on scale and zero. Add exactly 40 g of freshly ground coffee to the filter and level. Zero scale again.",
+      "recipe_id": 4,
+      "order": 6
+    }
+  },
+  {
+    "model":"dialinginapi.step",
+    "pk": 29,
+    "fields": {
+      "description": "Start the timer and pour ~80 g of water over the coffe, being sure to wet ALL the grounds. Allow the coffee to bloom until the timer reaches 45 seconds before adding more water.",
+      "recipe_id": 4,
+      "order": 7
+    }
+  },
+  {
+    "model":"dialinginapi.step",
+    "pk": 30,
+    "fields": {
+      "description": "At 45 seconds add  ~150 g of water by slowly pouring water over the coffee in small circles moving around the coffee bed but avoiding the edges of the filter.",
+      "recipe_id": 4,
+      "order": 8
+    }
+  },
+  {
+    "model":"dialinginapi.step",
+    "pk": 31,
+    "fields": {
+      "description": "Pour another 150 g of water at 1:30, 2:30, and 3:30 finishing at exactly 680 g.",
+      "recipe_id": 4,
+      "order": 9
+    }
+  },
+  {
+    "model":"dialinginapi.step",
+    "pk": 32,
+    "fields": {
+      "description": "Allow the coffee to continue to drip until you have a slow drip (this should happen at 5-6 minutes). You should have a nice flat bed of coffee in your filter.",
+      "recipe_id": 4,
+      "order": 10
+    }
+  },
+  {
+    "model":"dialinginapi.step",
+    "pk": 33,
+    "fields": {
+      "description": "Remove filter and grounds, swirl your Chemex, and pour into your favorite coffee mug.",
+      "recipe_id": 4,
+      "order": 11
+    }
+  },
+  {
+    "model":"dialinginapi.step",
+    "pk": 34,
+    "fields": {
+      "description": "Measure out 63 grams of coarsly ground coffee.",
+      "recipe_id": 5,
+      "order": 1
+    }
+  },
+  {
+    "model":"dialinginapi.step",
+    "pk": 35,
+    "fields": {
+      "description": "Pour 946 grams of water into the reservoir, then insert the filter and put in your ground coffee.",
+      "recipe_id": 5,
+      "order": 2
+    }
+  },
+  {
+    "model":"dialinginapi.step",
+    "pk": 36,
+    "fields": {
+      "description": "Turn the percolator on. It will immediately begin heating the water and should start to brew within the first minute.",
+      "recipe_id": 5,
+      "order": 3
+    }
+  },
+  {
+    "model":"dialinginapi.step",
+    "pk": 37,
+    "fields": {
+      "description": "After about 3-6 minutes (depending on the model and size) the brew cycle is finished. Many electric percolators have a light on the front that tells you when it is ready.",
+      "recipe_id": 5,
+      "order": 4
+    }
+  },
+  {
+    "model":"dialinginapi.step",
+    "pk": 38,
+    "fields": {
+      "description": "Unplug the percolator and let it cool down before removing and cleaning the parts.",
+      "recipe_id": 5,
+      "order": 5
+    }
+  },
+  {
+    "model":"dialinginapi.step",
+    "pk": 39,
+    "fields": {
+      "description": "Heat Kalita Wave, filter and server by pouring hot water in the center of the filter; this will also help reduce the flavor impacted by the paper. Pour hot water out both the server and the Kalita Wave.",
+      "recipe_id": 6,
+      "order": 1
+    }
+  },
+  {
+    "model":"dialinginapi.step",
+    "pk": 40,
+    "fields": {
+      "description": "Weigh out ~25 g of your favorite coffee and grind about the size of slightly coarser than table salt.",
+      "recipe_id": 6,
+      "order": 2
+    }
+  },
+  {
+    "model":"dialinginapi.step",
+    "pk": 41,
+    "fields": {
+      "description": "Place Kalita Wave and brewing server on scale and tare. Add exactly 24 g of freshly ground coffee to the filter and level out. Tare scale again.",
+      "recipe_id": 6,
+      "order": 3
+    }
+  },
+  {
+    "model":"dialinginapi.step",
+    "pk": 42,
+    "fields": {
+      "description": "Start timer and pour 50 g of hot water over the coffee, ensuring all grounds are wet. Allow the coffee to bloom till the timer reaches 30 seconds before adding more water.",
+      "recipe_id": 6,
+      "order": 4
+    }
+  },
+  {
+    "model":"dialinginapi.step",
+    "pk": 43,
+    "fields": {
+      "description": "At 45 seconds pour ~150 g of water, pouring in uniformed swirls starting in the middle of the coffee bed and working your way out towards the filter.",
+      "recipe_id": 6,
+      "order": 5
+    }
+  },
+  {
+    "model":"dialinginapi.step",
+    "pk": 44,
+    "fields": {
+      "description": "Continue to pour ~50 g of water in spirals about every 15 seconds until 400 g is reached. Try to finish pouring by 2 min.",
+      "recipe_id": 6,
+      "order": 6
+    }
+  },
+  {
+    "model":"dialinginapi.step",
+    "pk": 45,
+    "fields": {
+      "description": "Allow the coffee to continue to drip until you have a slow drip (this should happen at 3-3:15 minutes). You should have a nice flat bed of coffee in your filter.",
+      "recipe_id": 6,
+      "order": 7
+    }
+  },
+  {
+    "model":"dialinginapi.step",
+    "pk": 46,
+    "fields": {
+      "description": "Remove filter and grounds and dripper. Swirl your server and pour into your favorite coffee mug.",
+      "recipe_id": 6,
+      "order": 8
+    }
+  },
+  {
+    "model":"dialinginapi.step",
+    "pk": 47,
+    "fields": {
+      "description": "Rinse the filter in the Hario dripper with water just off the boil (about 205°F) to eliminate paper flavor and to heat up the mug or carafe you are brewing into. Discard the rinse water.",
+      "recipe_id": 7,
+      "order": 1
+    }
+  },
+  {
+    "model":"dialinginapi.step",
+    "pk": 48,
+    "fields": {
+      "description": "Grind 21 grams (about 3 Tablespoons) of coffee to be about as fine as kosher salt. Add coffee to your brewer.",
+      "recipe_id": 7,
+      "order": 2
+    }
+  },
+  {
+    "model":"dialinginapi.step",
+    "pk": 49,
+    "fields": {
+      "description": "Saturate the grounds with water right off the boil (about 205°F). Use just enough water to cover the grounds. Let it bloom for 15 seconds.",
+      "recipe_id": 7,
+      "order": 3
+    }
+  },
+  {
+    "model":"dialinginapi.step",
+    "pk": 50,
+    "fields": {
+      "description": "Pour water in a slow, even spiral, adding water every 10-15 seconds for an even extraction. Pour over the dark spots and avoid the light ones. If you're using a scale, you should pour until you reach 360 g.",
+      "recipe_id": 7,
+      "order": 4
+    }
+  },
+  {
+    "model":"dialinginapi.step",
+    "pk": 51,
+    "fields": {
+      "description": "Once you hit 3:00, you should have about 10 oz of brewed coffee. Remove the brewer and pour the coffee into a warm mug.",
+      "recipe_id": 7,
+      "order": 5
+    }
+  },
+  {
+    "model":"dialinginapi.step",
+    "pk": 52,
+    "fields": {
+      "description": "First, insert the stopper into the outside bottom of the brewing container.",
+      "recipe_id": 8,
+      "order": 1
+    }
+  },
+  {
+    "model":"dialinginapi.step",
+    "pk": 53,
+    "fields": {
+      "description": "Then, dampen the filter and insert it into the bottom of the brewing container.",
+      "recipe_id": 8,
+      "order": 2
+    }
+  },
+  {
+    "model":"dialinginapi.step",
+    "pk": 54,
+    "fields": {
+      "description": "Next, add 1 cup of water into the bottom of the Toddy brewing container and 170g of ground coffee.",
+      "recipe_id": 8,
+      "order": 3
+    }
+  },
+  {
+    "model":"dialinginapi.step",
+    "pk": 55,
+    "fields": {
+      "description": "Slowly pour 3 more cups of water over the grounds in a circular motion.",
+      "recipe_id": 8,
+      "order": 4
+    }
+  },
+  {
+    "model":"dialinginapi.step",
+    "pk": 56,
+    "fields": {
+      "description": "Wait 5 minutes. then add the remaining 170g of coffee.",
+      "recipe_id": 8,
+      "order": 5
+    }
+  },
+  {
+    "model":"dialinginapi.step",
+    "pk": 57,
+    "fields": {
+      "description": "Finally, slowly add the last 4 cups of water.Do not stir.",
+      "recipe_id": 8,
+      "order": 6
+    }
+  },
+  {
+    "model":"dialinginapi.step",
+    "pk": 58,
+    "fields": {
+      "description": "Lightly press down on the topmost grounds with spoon to ensure all grounds are wet",
+      "recipe_id": 8,
+      "order": 7
+    }
+  },
+  {
+    "model":"dialinginapi.step",
+    "pk": 59,
+    "fields": {
+      "description": "Steep you coffee grounds at room temperature 8-12 hours depending how strong you want the end result to be.",
+      "recipe_id": 8,
+      "order": 8
+    }
+  },
+  {
+    "model":"dialinginapi.step",
+    "pk": 60,
+    "fields": {
+      "description": "Remove the stopper and let your coffee concentrate decante.Wash felt filter and Toddy after use.",
+      "recipe_id": 8,
+      "order": 9
+    }
+  },
+  {
+    "model":"dialinginapi.step",
+    "pk": 61,
+    "fields": {
+      "description": "For best results, we recommend starting with a ratio of 1 part concentrate to 2 parts water or milk.",
+      "recipe_id": 8,
+      "order": 10
+    }
+  },
+  {
+    "model":"dialinginapi.step",
+    "pk": 62,
+    "fields": {
+      "description": "Weigh out 60g.We recommend a 1:16 ratio of coffee to water.",
+      "recipe_id": 9,
+      "order": 1
+    }
+  },
+  {
+    "model":"dialinginapi.step",
+    "pk": 63,
+    "fields": {
+      "description": "Grind the beans just before brewing.  Set the level of coarseness according to the filter type you are using.",
+      "recipe_id": 9,
+      "order": 2
+    }
+  },
+  {
+    "model":"dialinginapi.step",
+    "pk": 64,
+    "fields": {
+      "description": "For flat-bottom filters, grind on an auto-drip or medium setting. For cone shaped filters, adjust the grind to a slightly coarser setting.",
+      "recipe_id": 9,
+      "order": 3
+    }
+  },
+  {
+    "model":"dialinginapi.step",
+    "pk": 65,
+    "fields": {
+      "description": "Insert the filter into the brew basket and pour your freshly ground coffee into the filter.",
+      "recipe_id": 9,
+      "order": 4
+    }
+  },
+  {
+    "model":"dialinginapi.step",
+    "pk": 66,
+    "fields": {
+      "description": "Add the appropriate amount of measured water to the brewer.",
+      "recipe_id": 9,
+      "order": 5
+    }
+  },
+  {
+    "model":"dialinginapi.step",
+    "pk": 67,
+    "fields": {
+      "description": "Start the machine and make sure you allow the entire brew cycle to finish, then immediately discard the coffee grounds.",
+      "recipe_id": 9,
+      "order": 6
+    }
+  },
+  {
+    "model":"dialinginapi.step",
+    "pk": 68,
+    "fields": {
+      "description": "Make sure to remove your coffee carafe from the heat source after 15 minutes as prolonged exposure to the heat plate will negatively impact the flavor.",
+      "recipe_id": 9,
+      "order": 7
+    }
+  },
+  {
+    "model":"dialinginapi.step",
+    "pk": 69,
+    "fields": {
+      "description": "Preheat your stove on a low-medium setting. If you have gas burners, turn to a low heat.",
+      "recipe_id": 10,
+      "order": 1
+    }
+  },
+  {
+    "model":"dialinginapi.step",
+    "pk": 70,
+    "fields": {
+      "description": "Pour 120g of water into the 2-cup ibrik.",
+      "recipe_id": 10,
+      "order": 2
+    }
+  },
+  {
+    "model":"dialinginapi.step",
+    "pk": 71,
+    "fields": {
+      "description": "Grind 14g of coffee to a very fine powder and pour it into the water.",
+      "recipe_id": 10,
+      "order": 3
+    }
+  },
+  {
+    "model":"dialinginapi.step",
+    "pk": 72,
+    "fields": {
+      "description": "Place the ibrik on the heat source and let it sit. After 30 seconds, stir the grounds into the water.",
+      "recipe_id": 10,
+      "order": 4
+    }
+  },
+  {
+    "model":"dialinginapi.step",
+    "pk": 73,
+    "fields": {
+      "description": "Between 1:00 and 1:30, you will start to see little bubbles form in the coffee. These tiny, infrequent bubbles are okay, but if they start to reach a boil, hold the ibrik up from the heat slightly.",
+      "recipe_id": 10,
+      "order": 5
+    }
+  },
+  {
+    "model":"dialinginapi.step",
+    "pk": 74,
+    "fields": {
+      "description": "Around 2:30, you want to have a thick foam forming in the ibrik. Raise or lower the heat as needed to hit this mark.",
+      "recipe_id": 10,
+      "order": 6
+    }
+  },
+  {
+    "model":"dialinginapi.step",
+    "pk": 75,
+    "fields": {
+      "description": "Let the foam rise till it reaches the very top of the ibrik, then remove completely from the heat.",
+      "recipe_id": 10,
+      "order": 7
+    }
+  },
+  {
+    "model":"dialinginapi.step",
+    "pk": 76,
+    "fields": {
+      "description": "Quickly pour the coffee, grounds and all, into two small cups.",
+      "recipe_id": 10,
+      "order": 8
+    }
+  },
+  {
+    "model":"dialinginapi.step",
+    "pk": 77,
+    "fields": {
+      "description": "Let the coffee sit for another 2.5 minutes to finish brewing and cool down. This resting period also allows most of the grounds to settle in the bottom of the cup.",
+      "recipe_id": 10,
+      "order": 9
+    }
+  }
+]
