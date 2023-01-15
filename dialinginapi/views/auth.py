@@ -39,12 +39,11 @@ def register_user(request):
     user = User.objects.create(
       uid = request.data['uid'],
       image_url = request.data['image_url'],
-      name = request.data['name']
+      name = request.data['name'],
     )
-
     data = {
       'id': user.id,
-      'uid': user.method_id,
+      'uid': user.uid,
       'image_url': user.image_url,
       'name': user.name
     }
