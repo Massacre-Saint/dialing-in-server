@@ -11,11 +11,9 @@ class MethodEquipmentView(ViewSet):
         method_equipment = MethodEquipment.objects.all()
 
         try:
-            method_id = request.query_params.get('methodId')
-            method_id = Method.objects.get(pk=method_id)
-            if method_id is not None:
-                method_equipment = method_equipment.filter(method_id = method_id)
-                serializer = MethodEquipmentSerializer(method_equipment, many=True)
+            method = request.query_params.get('methodId')
+            method_equipment = method_equipment.filter(method_id = method)
+            serializer = MethodEquipmentSerializer(method_equipment, many=True)
 
             return Response(serializer.data)
         except Method.DoesNotExist as ex:

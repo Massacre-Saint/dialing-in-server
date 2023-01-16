@@ -4,3 +4,4 @@ from .user import UserView
 from .method import MethodView
 from .grind import GrindView
 from .method_equipment import MethodEquipmentView
+from .recipe import RecipeView
