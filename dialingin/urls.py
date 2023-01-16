@@ -17,12 +17,20 @@ from django.contrib import admin
 from django.urls import path
 from django.conf.urls import include
 from rest_framework import routers
-from dialinginapi.views import check_user, register_user, UserView, MethodView, GrindView
+from dialinginapi.views import (
+    check_user,
+    register_user,
+    UserView,
+    MethodView,
+    GrindView,
+    MethodEquipmentView
+)
 
 router = routers.DefaultRouter(trailing_slash=False)
 router.register(r'users', UserView, 'users')
 router.register(r'methods', MethodView, 'users')
 router.register(r'grinds', GrindView, 'grinds')
+router.register(r'method_equip', MethodEquipmentView, 'method_equip')
 urlpatterns = [
     path('register', register_user),
     path('checkuser', check_user),
