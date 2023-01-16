@@ -9,8 +9,6 @@ class UserView(ViewSet):
     def retrieve(self, request,pk):
         """Get single user method"""
 
-        uid = request.META['HTTP_AUTHORIZATION']
-
         try:
             user = User.objects.get(pk=pk)
             serializer = UserSerializer(user)
