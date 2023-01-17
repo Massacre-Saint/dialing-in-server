@@ -8,3 +8,4 @@ from .recipe import RecipeView
 from .recipe_equipment import RecipeEquipmentView
 from .steps import StepView
 from .favorite import FavoriteView
+from .owner import OwnerView
