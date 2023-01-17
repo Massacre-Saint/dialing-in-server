@@ -25,7 +25,6 @@ class FavoriteView(ViewSet):
         user = User.objects.get(uid=uid)
         try:
             favorites_by_user = favorites.filter(user_id = user.id)
-            serializer = FavoriteSerializer(favorites_by_user, many=True)
 
         except Favorite.DoesNotExist as ex:
 
@@ -38,6 +37,7 @@ class FavoriteView(ViewSet):
 class FavoriteSerializer(serializers.ModelSerializer):
     """Serilizer for Favorite Class"""
     class Meta:
+        depth = 2
         model = Favorite
         fields = (
           'id',
