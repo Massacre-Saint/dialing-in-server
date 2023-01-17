@@ -25,7 +25,7 @@ class RecipeEquipmentView(ViewSet):
         recipe = request.query_params.get('recipeId')
         try:
             if recipe is not None:
-                equip_by_recipe = recipe_equipment.filter(recipe_id=recipe)
+                equip_by_recipe = recipe_equipment.filter(recipe_id = recipe)
                 serializer = RecipeEquipmentSerializer(equip_by_recipe, many=True)
 
                 return Response(serializer.data)
