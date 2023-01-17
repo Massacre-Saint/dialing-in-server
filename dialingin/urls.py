@@ -26,13 +26,15 @@ from dialinginapi.views import (
     MethodEquipmentView,
     RecipeView,
     RecipeEquipmentView,
-    StepView
+    StepView,
+    FavoriteView
 )
 
 router = routers.DefaultRouter(trailing_slash=False)
 router.register(r'users', UserView, 'users')
 router.register(r'methods', MethodView, 'users')
 router.register(r'grinds', GrindView, 'grinds')
+router.register(r'favorites', FavoriteView, 'favorites')
 router.register(r'steps', StepView, 'steps')
 router.register(r'method_equip', MethodEquipmentView, 'method_equip')
 router.register(r'recipes', RecipeView, 'recipes')
