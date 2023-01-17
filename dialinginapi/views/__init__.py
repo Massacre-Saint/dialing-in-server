@@ -6,3 +6,4 @@ from .grind import GrindView
 from .method_equipment import MethodEquipmentView
 from .recipe import RecipeView
 from .recipe_equipment import RecipeEquipmentView
+from .steps import StepView
