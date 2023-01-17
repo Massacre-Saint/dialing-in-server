@@ -24,7 +24,8 @@ from dialinginapi.views import (
     MethodView,
     GrindView,
     MethodEquipmentView,
-    RecipeView
+    RecipeView,
+    RecipeEquipmentView
 )
 
 router = routers.DefaultRouter(trailing_slash=False)
@@ -33,6 +34,7 @@ router.register(r'methods', MethodView, 'users')
 router.register(r'grinds', GrindView, 'grinds')
 router.register(r'method_equip', MethodEquipmentView, 'method_equip')
 router.register(r'recipes', RecipeView, 'recipes')
+router.register(r'recipe_equip', RecipeEquipmentView, 'recipe_equip')
 urlpatterns = [
     path('register', register_user),
     path('checkuser', check_user),

@@ -5,9 +5,9 @@ from rest_framework import serializers,status
 from dialinginapi.models import MethodEquipment, Method
 
 class MethodEquipmentView(ViewSet):
-    """Class create viewset for Method"""
+    """Class create viewset for MethodEquipment"""
     def list(self, request):
-        """Handles GET requests to get all methods"""
+        """Handles GET requests to get all method_equipment """
         method_equipment = MethodEquipment.objects.all()
 
         try:
