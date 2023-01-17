@@ -5,3 +5,4 @@ from .method import MethodView
 from .grind import GrindView
 from .method_equipment import MethodEquipmentView
 from .recipe import RecipeView
+from .recipe_equipment import RecipeEquipmentView
