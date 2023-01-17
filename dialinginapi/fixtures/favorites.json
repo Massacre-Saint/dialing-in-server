@@ -1,0 +1,26 @@
+[
+  {
+    "model": "dialinginapi.favorite",
+    "pk": 1,
+    "fields": {
+      "recipe_id": 2,
+      "user_id": 2
+    }
+  },
+  {
+    "model": "dialinginapi.favorite",
+    "pk": 2,
+    "fields": {
+      "recipe_id": 3,
+      "user_id": 2
+    }
+  },
+  {
+    "model": "dialinginapi.favorite",
+    "pk": 3,
+    "fields": {
+      "recipe_id": 1,
+      "user_id": 1
+    }
+  }
+]
