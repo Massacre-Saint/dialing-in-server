@@ -6,5 +6,21 @@
       "recipe_id":11,
       "user_id": 1
     }
+  },
+  {
+    "model": "dialinginapi.owner",
+    "pk": 2,
+    "fields": {
+      "recipe_id":12,
+      "user_id": 1
+    }
+  },
+  {
+    "model": "dialinginapi.owner",
+    "pk": 3,
+    "fields": {
+      "recipe_id":13,
+      "user_id": 1
+    }
   }
 ]

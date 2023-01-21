@@ -152,5 +152,33 @@
       "default": false,
       "published": true
     }
+  },
+  {
+    "model":"dialinginapi.recipe",
+    "pk": 12,
+    "fields": {
+      "brew_time": 320,
+      "grind_id": 1,
+      "weight": 120,
+      "dose": 14,
+      "method_id": 1,
+      "recipe_name": "Second User",
+      "default": false,
+      "published": true
+    }
+  },
+  {
+    "model":"dialinginapi.recipe",
+    "pk": 13,
+    "fields": {
+      "brew_time": 320,
+      "grind_id": 1,
+      "weight": 120,
+      "dose": 14,
+      "method_id": 2,
+      "recipe_name": "Third User",
+      "default": false,
+      "published": false
+    }
   }
 ]

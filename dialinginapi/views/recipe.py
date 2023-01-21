@@ -51,7 +51,7 @@ class RecipeView(ViewSet):
 class RecipeSerializer(serializers.ModelSerializer):
     """Serilizer for User Class"""
     class Meta:
-        depth = 1
+        depth = 2
         model = Recipe
         fields = (
           'id',
