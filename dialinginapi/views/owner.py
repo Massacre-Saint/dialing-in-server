@@ -65,9 +65,14 @@ class OwnerView(ViewSet):
                             oid = owner.recipe_id_id
                             if oid == rid:
                                 final.append(owner)
+                                
                         serializer = OwnerSerializer(final, many=True)
+                        owner_serialized = serializer.data
+                        for i in owner_serialized:
+                            final.append(i)
+                            return Response(owner_serialized)
                 else:
-                    return Response({'message': 'method does not exist'})
+                    return Response([])
                 
                 
         except Owner.DoesNotExist as ex:
