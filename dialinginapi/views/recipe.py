@@ -30,7 +30,14 @@ class RecipeView(ViewSet):
         """
         recipes = Recipe.objects.all()
         serializer = RecipeSerializer(recipes, many=True)
-        method = request.query_params.get('methodId')
+        method = request.query_params.get('methodId', None)
+        default = request.query_params.get('default',None)
+
+        if default is not None:
+            recipes_by_default = recipes.filter(default = True)
+            method_recipes_by_default = recipes_by_default.filter(method_id =method)
+            serializer= RecipeSerializer(method_recipes_by_default, many= True)
+            return Response(serializer.data)
         try:
             if method is not None:
                 recipes_by_method = recipes.filter(method_id = method)
@@ -44,7 +51,7 @@ class RecipeView(ViewSet):
 class RecipeSerializer(serializers.ModelSerializer):
     """Serilizer for User Class"""
     class Meta:
-        depth = 1
+        depth = 2
         model = Recipe
         fields = (
           'id',
