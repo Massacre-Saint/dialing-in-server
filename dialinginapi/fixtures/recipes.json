@@ -138,5 +138,19 @@
       "default": true,
       "published": true
     }
+  },
+  {
+    "model":"dialinginapi.recipe",
+    "pk": 11,
+    "fields": {
+      "brew_time": 320,
+      "grind_id": 1,
+      "weight": 120,
+      "dose": 14,
+      "method_id": 1,
+      "recipe_name": "First User Recipe",
+      "default": false,
+      "published": true
+    }
   }
 ]

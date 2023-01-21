@@ -1,1 +1,10 @@
-[]
+[
+  {
+    "model": "dialinginapi.owner",
+    "pk": 1,
+    "fields": {
+      "recipe_id":11,
+      "user_id": 1
+    }
+  }
+]
