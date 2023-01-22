@@ -89,7 +89,7 @@ class OwnerView(ViewSet):
         recipe = Recipe.objects.get(pk = request.data['recipeId'])
         uid = request.META['HTTP_AUTHORIZATION']
         user = User.objects.get(uid=uid)
-        print(user)
+
         owner = Owner.objects.create(
             user_id = user,
             recipe_id = recipe
