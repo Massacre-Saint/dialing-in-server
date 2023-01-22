@@ -2,7 +2,7 @@
 from rest_framework.viewsets import ViewSet
 from rest_framework.response import Response
 from rest_framework import serializers, status
-from dialinginapi.models import Recipe
+from dialinginapi.models import Recipe, Method, Grind
 
 class RecipeView(ViewSet):
     """Class creates viewset for Recipe"""
@@ -48,6 +48,32 @@ class RecipeView(ViewSet):
             return Response({'message': ex.args[0]}, status=status.HTTP_404_NOT_FOUND)
 
         return Response(serializer.data)
+    
+    def create(self, request):
+        """_summary_
+
+        Args:
+            request (_type_): _description_
+        """
+        payload = request.data
+        if payload:
+            method = Method.objects.get(pk = request.data['methodId'])
+            if method:
+                recipe = Recipe.objects.create (
+                    default = False,
+                    method_id = method
+                )
+            serializer = RecipeSerializer(recipe)
+
+        recipe = Recipe.objects.create (
+            default = False
+        )
+        serializer = RecipeSerializer(recipe)
+        return Response(serializer.data)
+    def destroy(self, request, pk):
+        recipe = Recipe.objects.get(pk = pk)
+        recipe.delete()
+        return Response(None, status=status.HTTP_204_NO_CONTENT)
 class RecipeSerializer(serializers.ModelSerializer):
     """Serilizer for User Class"""
     class Meta:
