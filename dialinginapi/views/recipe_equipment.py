@@ -2,7 +2,7 @@
 from rest_framework.viewsets import ViewSet
 from rest_framework.response import Response
 from rest_framework import serializers,status
-from dialinginapi.models import RecipeEquipment
+from dialinginapi.models import RecipeEquipment, Recipe
 
 class RecipeEquipmentView(ViewSet):
     """Class creates viewset for RecipeEquipment"""
@@ -36,6 +36,22 @@ class RecipeEquipmentView(ViewSet):
 
         return Response(serializer.data)
 
+    def create(self,request):
+        """_summary_
+
+        Args:
+            request (_type_): _description_
+        """
+        recipe = Recipe.objects.get(pk = request.data['recipeId'])
+        
+        recipe_equip = RecipeEquipment.objects.create(
+            type = request.data['type'],
+            name = request.data['name'],
+            setting = request.data['setting'],
+            recipe_id = recipe
+        )
+        serializer = RecipeEquipmentSerializer(recipe_equip)
+        return Response(serializer.data)
 class RecipeEquipmentSerializer(serializers.ModelSerializer):
     """Serilizer for Method Class"""
     class Meta:
