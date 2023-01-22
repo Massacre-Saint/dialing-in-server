@@ -2,7 +2,7 @@
 from rest_framework.viewsets import ViewSet
 from rest_framework.response import Response
 from rest_framework import serializers,status
-from dialinginapi.models import Step
+from dialinginapi.models import Step, Recipe
 
 class StepView(ViewSet):
     """Class creates viewset for Step"""
@@ -35,6 +35,44 @@ class StepView(ViewSet):
         serializer = StepSerializer(steps, many=True)
         return Response(serializer.data)
 
+    def create(self, request):
+        """_summary_
+
+        Args:
+            request (_type_): _description_
+        """
+        recipe = Recipe.objects.get(pk = request.data['recipeId'])
+        steps = Step.objects.all()
+        recipe_steps = steps.filter(recipe_id_id = recipe)
+
+        if len(recipe_steps) > 0:
+            sorted_data = recipe_steps.order_by('order')
+            last_order = sorted_data.last()
+            print(last_order.__dict__)
+            step = Step.objects.create(
+                description = request.data['description'],
+                recipe_id = recipe,
+                order = last_order.order + 1
+            )
+            serializer = StepSerializer(step)
+            return Response(serializer.data)
+        step = Step.objects.create(
+            description = request.data['description'],
+            recipe_id = recipe,
+            order = 1
+        )
+        serializer = StepSerializer(step)
+        return Response(serializer.data)
+    def destroy(self, request,pk):
+        """_summary_
+
+        Args:
+            request (_type_): _description_
+            pk (_type_): _description_
+        """
+        step = Step.objects.get(pk=pk)
+        step.delete()
+        return Response(None, status=status.HTTP_204_NO_CONTENT)
 class StepSerializer(serializers.ModelSerializer):
     """Serilizer for Method Class"""
     class Meta:
