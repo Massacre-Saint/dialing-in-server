@@ -14,7 +14,7 @@ class OwnerView(ViewSet):
 
             return Response(serializer.data)
 
-        except Owner.DoesNotExist as ex:
+        except Recipe.DoesNotExist as ex:
 
             return Response({'message': ex.args[0]}, status=status.HTTP_404_NOT_FOUND)
   
@@ -78,9 +78,37 @@ class OwnerView(ViewSet):
         except Owner.DoesNotExist as ex:
             # Error handling for no owner recipes
             return Response({'message': ex.args[0]}, status=status.HTTP_404_NOT_FOUND)
-        print('last return')
         serializer= OwnerSerializer(owner_recipes, many=True)
         return Response(serializer.data)
+    def create(self, request):
+        """_summary_
+
+        Args:
+            request (_type_): _description_
+        """
+        recipe = Recipe.objects.get(pk = request.data['recipeId'])
+        uid = request.META['HTTP_AUTHORIZATION']
+        user = User.objects.get(uid=uid)
+        print(user)
+        owner = Owner.objects.create(
+            user_id = user,
+            recipe_id = recipe
+        )
+        serializer = OwnerSerializer(owner)
+        return Response(serializer.data)
+    
+    def destroy(self, request, pk):
+        """_summary_
+
+        Args:
+            rquest (_type_): _description_
+            pk (_type_): _description_
+        """
+        owner = Owner.objects.get(pk=pk)
+        recipe = Recipe.objects.get(pk = owner.recipe_id_id)
+        recipe.delete()
+        owner.delete()
+        return Response(None, status=status.HTTP_204_NO_CONTENT)
 class OwnerSerializer(serializers.ModelSerializer):
     """Serilizer for Owner Class"""
     class Meta:

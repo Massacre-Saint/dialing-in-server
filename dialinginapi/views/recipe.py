@@ -71,6 +71,15 @@ class RecipeView(ViewSet):
         serializer = RecipeSerializer(recipe)
         return Response(serializer.data)
     def destroy(self, request, pk):
+        """_summary_
+
+        Args:
+            request (_type_): _description_
+            pk (_type_): _description_
+
+        Returns:
+            _type_: _description_
+        """
         recipe = Recipe.objects.get(pk = pk)
         recipe.delete()
         return Response(None, status=status.HTTP_204_NO_CONTENT)
