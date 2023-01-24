@@ -1,0 +1,15 @@
+[
+  {
+    "model":"dialinginapi.user",
+    "pk": 2,
+    "fields": {
+      "uid": "QvokCqe9RMZIoTcn7oPm5FbVDUy2",
+      "method_id": 1,
+      "fav_roast": "Medium",
+      "fav_shop": "Crema",
+      "description": "This is a test account.",
+      "image_url": "https://lh3.googleusercontent.com/a-/AFdZucpDUWCoE0c_IhrZeoXtfk-og3PMYT9E9lCdhyKE2g=s96-c",
+      "name": "JB"
+    }
+  }
+]

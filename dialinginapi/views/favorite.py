@@ -7,6 +7,17 @@ class FavoriteView(ViewSet):
     """Class creates viewset for Favorite"""
     def retrieve(self, request, pk):
         """Handles GET request for single Favorite """
+        # favorite = Favorite.objects.get(pk=pk)
+        # recipe_id = request.query_params.get('recipeId', None)
+        # if recipe_id is not None:
+        #     recipe = Recipe.objects.get(pk = recipe_id)
+        #     if recipe.pk == favorite.recipe_id_id:
+        #         serializer = FavoriteSerializer(favorite)
+        #     else:
+        #         return Response([])
+        # serializer = FavoriteSerializer(favorite)
+        # return Response(serializer.data)
+
         try:
             favorite = Favorite.objects.get(pk=pk)
             serializer = FavoriteSerializer(favorite)
@@ -16,20 +27,34 @@ class FavoriteView(ViewSet):
         except Favorite.DoesNotExist as ex:
 
             return Response({'message': ex.args[0]}, status=status.HTTP_404_NOT_FOUND)
-
+        
     def list(self, request):
         """Handles GET requests for all favorites"""
         favorites = Favorite.objects.all()
-
+        recipe_id = request.query_params.get('recipeId', None)
         uid = request.META['HTTP_AUTHORIZATION']
-        user = User.objects.get(uid=uid)
+        
         try:
-            favorites_by_user = favorites.filter(user_id = user.id)
+            user = User.objects.get(uid=uid)
+            favorites_by_user = favorites.filter(user_id_id = user.id)
+            
+            if len(favorites_by_user) > 0:
+                print('first')
+                if recipe_id is not None:
+                    print('recipeId')
+                    favorite_recipe = favorites_by_user.filter(recipe_id_id = recipe_id)
+                    print('passed')
+                    if len(favorite_recipe) > 0:
+                        print('success')
+                        serializer = FavoriteSerializer(favorite_recipe, many=True)
+                        return Response(serializer.data)
+                    else:
+                        return Response({})
+            else:
+                return Response([])
 
-        except Favorite.DoesNotExist as ex:
-
+        except User.DoesNotExist as ex:
             return Response({'message': ex.args[0]}, status=status.HTTP_404_NOT_FOUND)
-
         serializer = FavoriteSerializer(favorites_by_user, many=True)
         return Response(serializer.data)
 

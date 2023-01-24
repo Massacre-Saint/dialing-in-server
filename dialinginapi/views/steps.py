@@ -24,7 +24,7 @@ class StepView(ViewSet):
         recipe = request.query_params.get('recipeId', None)
         try:
             if recipe is not None:
-                steps_by_recipe = steps.filter(recipe_id = recipe)
+                steps_by_recipe = steps.filter(recipe_id = recipe).order_by('order')
                 serializer = StepSerializer(steps_by_recipe, many=True)
 
                 return Response(serializer.data)
