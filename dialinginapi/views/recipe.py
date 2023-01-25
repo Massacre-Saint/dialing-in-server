@@ -57,19 +57,64 @@ class RecipeView(ViewSet):
         """
         payload = request.data
         if payload:
-            method = Method.objects.get(pk = request.data['methodId'])
+            method = Method.objects.get(pk = request.data['method_id'])
             if method:
                 recipe = Recipe.objects.create (
                     default = False,
-                    method_id = method
+                    method_id = method,
+                    published = False
                 )
             serializer = RecipeSerializer(recipe)
 
         recipe = Recipe.objects.create (
-            default = False
+            default = False,
+            published = False,
+            
         )
         serializer = RecipeSerializer(recipe)
         return Response(serializer.data)
+    
+    def update(self, request, pk):
+        """_summary_
+
+        Args:
+            request (_type_): _description_
+            pk (_type_): _description_
+        """
+        body = request.data
+        recipe = Recipe.objects.get(pk = pk)
+        print(body)
+        if 'method_id' in body:
+            method = Method.objects.get(pk=body['method_id'])
+            recipe.method_id = method
+        else:
+            recipe.method_id = None
+        if 'grind_id' in body:
+            grind = Grind.objects.get(pk=body['grind_id'])
+            recipe.grind_id = grind
+        else:
+            recipe.grind_id = None
+        if 'weight' in body:
+            recipe.weight = request.data['weight']
+        else:
+            recipe.weight = None
+        if 'dose' in body:
+            recipe.dose = request.data['dose']
+        else:
+            recipe.dose = None
+        if 'brew_time' in body:
+            recipe.brew_time = request.data['brew_time']
+        else:
+            recipe.brew_time = None
+        if 'published' in body:
+            recipe.published = request.data['published']
+        else:
+            recipe.published = None
+
+        recipe.save()
+        print(recipe.__dict__)
+        return Response(None, status=status.HTTP_204_NO_CONTENT)
+    
     def destroy(self, request, pk):
         """_summary_
 

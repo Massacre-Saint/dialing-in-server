@@ -20,11 +20,11 @@ class UserView(ViewSet):
     def update(self, request,pk):
         """Method handles PUT request for updating user"""
         user = User.objects.get(pk=pk)
-        method_id = Method.objects.get(pk=request.data['method_id'])
+        method_id = Method.objects.get(pk=request.data['methodId'])
 
         user.method_id = method_id
-        user.fav_roast = request.data['fav_roast']
-        user.fav_shop = request.data['fav_shop']
+        user.fav_roast = request.data['favRoast']
+        user.fav_shop = request.data['favShop']
         user.description = request.data['description']
         user.save()
 

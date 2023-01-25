@@ -47,13 +47,6 @@ class OwnerView(ViewSet):
                 return Response({'message': ex.args[0]}, status=status.HTTP_404_NOT_FOUND)
         try:
             if method_id is not None:
-                print('methodId')
-                # recipes = Recipe.objects.all()
-                # user_recipes_by_method = recipes.filter(method_id = method_id, default = False, published = True)
-                # final = owner_recipes.filter(recipe_id__id = user_recipes_by_method[0].pk)
-                # serializer = OwnerSerializer(final, many=True)
-
-                # return Response(serializer.data)
                 recipes = Recipe.objects.all()
                 user_recipes_by_method = recipes.filter(method_id = method_id, default = False, published = True)
                 final = []
@@ -86,7 +79,8 @@ class OwnerView(ViewSet):
         Args:
             request (_type_): _description_
         """
-        recipe = Recipe.objects.get(pk = request.data['recipeId'])
+        print(request.data)
+        recipe = Recipe.objects.get(pk = request.data['recipe_id'])
         uid = request.META['HTTP_AUTHORIZATION']
         user = User.objects.get(uid=uid)
 
