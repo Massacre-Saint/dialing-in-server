@@ -79,7 +79,8 @@ class OwnerView(ViewSet):
         Args:
             request (_type_): _description_
         """
-        recipe = Recipe.objects.get(pk = request.data['recipeId'])
+        print(request.data)
+        recipe = Recipe.objects.get(pk = request.data['recipe_id'])
         uid = request.META['HTTP_AUTHORIZATION']
         user = User.objects.get(uid=uid)
 

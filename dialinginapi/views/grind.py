@@ -19,7 +19,7 @@ class GrindView(ViewSet):
 
     def list(self, request):
         """Handles GET requests to get all methods"""
-        grinds = Grind.objects.all()
+        grinds = Grind.objects.all().order_by('order')
         serializer = GrindSerializer(grinds, many=True)
 
         return Response(serializer.data)
