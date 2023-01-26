@@ -110,6 +110,10 @@ class RecipeView(ViewSet):
             recipe.published = request.data['published']
         else:
             recipe.published = None
+        if 'recipe_name' in body:
+            recipe.recipe_name = request.data['recipe_name']
+        else:
+            recipe.recipe_name = None
 
         recipe.save()
         print(recipe.__dict__)
