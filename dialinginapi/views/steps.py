@@ -62,6 +62,19 @@ class StepView(ViewSet):
         )
         serializer = StepSerializer(step)
         return Response(serializer.data)
+
+    def update(self, request, pk):
+        """_summary_
+
+        Args:
+            request (_type_): _description_
+            pk (_type_): _description_
+        """
+        step = Step.objects.get(pk=pk)
+        step.description = request.data['description']
+        step.save()
+        return Response(None, status=status.HTTP_204_NO_CONTENT)
+        
     def destroy(self, request,pk):
         """_summary_
 
