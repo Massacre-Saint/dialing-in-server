@@ -52,6 +52,22 @@ class RecipeEquipmentView(ViewSet):
         )
         serializer = RecipeEquipmentSerializer(recipe_equip)
         return Response(serializer.data)
+
+    def update(self, request, pk):
+        """_summary_
+
+        Args:
+            request (_type_): _description_
+            pk (_type_): _description_
+        """
+        equip = RecipeEquipment.objects.get(pk=pk)
+        equip.type = request.data['type']
+        equip.name = request.data['name']
+        equip.setting = request.data['setting']
+        equip.save()
+
+        return Response(None, status=status.HTTP_204_NO_CONTENT)
+
 class RecipeEquipmentSerializer(serializers.ModelSerializer):
     """Serilizer for Method Class"""
     class Meta:
