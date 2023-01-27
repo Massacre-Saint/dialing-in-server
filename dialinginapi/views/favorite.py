@@ -7,19 +7,9 @@ class FavoriteView(ViewSet):
     """Class creates viewset for Favorite"""
     def retrieve(self, request, pk):
         """Handles GET request for single Favorite """
-        # favorite = Favorite.objects.get(pk=pk)
-        # recipe_id = request.query_params.get('recipeId', None)
-        # if recipe_id is not None:
-        #     recipe = Recipe.objects.get(pk = recipe_id)
-        #     if recipe.pk == favorite.recipe_id_id:
-        #         serializer = FavoriteSerializer(favorite)
-        #     else:
-        #         return Response([])
-        # serializer = FavoriteSerializer(favorite)
-        # return Response(serializer.data)
-
         try:
-            favorite = Favorite.objects.get(pk=pk)
+            favorites= Favorite.objects.all()
+            favorite = favorites.get(pk=pk)
             serializer = FavoriteSerializer(favorite)
 
             return Response(serializer.data)
@@ -39,13 +29,9 @@ class FavoriteView(ViewSet):
             favorites_by_user = favorites.filter(user_id_id = user.id)
             
             if len(favorites_by_user) > 0:
-                print('first')
                 if recipe_id is not None:
-                    print('recipeId')
                     favorite_recipe = favorites_by_user.filter(recipe_id_id = recipe_id)
-                    print('passed')
                     if len(favorite_recipe) > 0:
-                        print('success')
                         serializer = FavoriteSerializer(favorite_recipe, many=True)
                         return Response(serializer.data)
                     else:
@@ -64,7 +50,7 @@ class FavoriteView(ViewSet):
         Args:
             request (_type_): _description_
         """
-        recipe = Recipe.objects.get(pk = request.data['recipeId'])
+        recipe = Recipe.objects.get(pk = request.data['recipe_id'])
         uid = request.META['HTTP_AUTHORIZATION']
         user = User.objects.get(uid=uid)
 

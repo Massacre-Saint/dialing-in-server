@@ -48,7 +48,6 @@ class StepView(ViewSet):
         if len(recipe_steps) > 0:
             sorted_data = recipe_steps.order_by('order')
             last_order = sorted_data.last()
-            print(last_order.__dict__)
             step = Step.objects.create(
                 description = request.data['description'],
                 recipe_id = recipe,
