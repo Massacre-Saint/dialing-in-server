@@ -14,9 +14,9 @@ class OwnerView(ViewSet):
 
             return Response(serializer.data)
 
-        except Recipe.DoesNotExist as ex:
+        except Owner.DoesNotExist:
 
-            return Response({'message': ex.args[0]}, status=status.HTTP_404_NOT_FOUND)
+            return Response([])
   
     def list(self, request):
         """Handles GET requests for Owner Class"""
@@ -47,10 +47,12 @@ class OwnerView(ViewSet):
                 return Response({'message': ex.args[0]}, status=status.HTTP_404_NOT_FOUND)
         try:
             if method_id is not None:
+                # uid = request.META['HTTP_AUTHORIZATION']
                 recipes = Recipe.objects.all()
-                user_recipes_by_method = recipes.filter(method_id = method_id, default = False, published = True)
                 final = []
-                print(len(user_recipes_by_method))
+                # draft_recipes = owner_recipes.filter(recipe_id_id__method_id_id = method_id, recipe_id_id__published = False, user_id_id_id =)
+                # print(draft_recipes)cd
+                user_recipes_by_method = recipes.filter(method_id = method_id, default = False)
                 if len(user_recipes_by_method) > 0:
                     for recipe in user_recipes_by_method:
                         rid = recipe.id
@@ -79,7 +81,6 @@ class OwnerView(ViewSet):
         Args:
             request (_type_): _description_
         """
-        print(request.data)
         recipe = Recipe.objects.get(pk = request.data['recipe_id'])
         uid = request.META['HTTP_AUTHORIZATION']
         user = User.objects.get(uid=uid)

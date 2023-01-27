@@ -83,7 +83,6 @@ class RecipeView(ViewSet):
         """
         body = request.data
         recipe = Recipe.objects.get(pk = pk)
-        print(body)
         if 'method_id' in body:
             method = Method.objects.get(pk=body['method_id'])
             recipe.method_id = method
@@ -110,9 +109,12 @@ class RecipeView(ViewSet):
             recipe.published = request.data['published']
         else:
             recipe.published = None
+        if 'recipe_name' in body:
+            recipe.recipe_name = request.data['recipe_name']
+        else:
+            recipe.recipe_name = None
 
         recipe.save()
-        print(recipe.__dict__)
         return Response(None, status=status.HTTP_204_NO_CONTENT)
     
     def destroy(self, request, pk):

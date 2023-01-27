@@ -41,14 +41,13 @@ class StepView(ViewSet):
         Args:
             request (_type_): _description_
         """
-        recipe = Recipe.objects.get(pk = request.data['recipeId'])
+        recipe = Recipe.objects.get(pk = request.data['recipe_id'])
         steps = Step.objects.all()
         recipe_steps = steps.filter(recipe_id_id = recipe)
 
         if len(recipe_steps) > 0:
             sorted_data = recipe_steps.order_by('order')
             last_order = sorted_data.last()
-            print(last_order.__dict__)
             step = Step.objects.create(
                 description = request.data['description'],
                 recipe_id = recipe,

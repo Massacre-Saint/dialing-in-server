@@ -42,7 +42,7 @@ class RecipeEquipmentView(ViewSet):
         Args:
             request (_type_): _description_
         """
-        recipe = Recipe.objects.get(pk = request.data['recipeId'])
+        recipe = Recipe.objects.get(pk = request.data['recipe_id'])
         
         recipe_equip = RecipeEquipment.objects.create(
             type = request.data['type'],
