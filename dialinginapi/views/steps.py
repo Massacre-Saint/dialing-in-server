@@ -51,14 +51,14 @@ class StepView(ViewSet):
             step = Step.objects.create(
                 description = request.data['description'],
                 recipe_id = recipe,
-                order = last_order.order + 1
+                order = last_order.order + 1,
             )
             serializer = StepSerializer(step)
             return Response(serializer.data)
         step = Step.objects.create(
             description = request.data['description'],
             recipe_id = recipe,
-            order = 1
+            order = 1,
         )
         serializer = StepSerializer(step)
         return Response(serializer.data)
@@ -70,6 +70,13 @@ class StepView(ViewSet):
             request (_type_): _description_
             pk (_type_): _description_
         """
+        steps = Step.objects.all()
+        recipe = Recipe.objects.get(pk = request.data['recipe_id'])
+        recipe_steps = steps.filter(recipe_id_id = recipe)
+        for i, obj in enumerate(recipe_steps):
+            obj.order = i + 1
+            print('loop')
+            obj.save()
         step = Step.objects.get(pk=pk)
         step.description = request.data['description']
         step.save()

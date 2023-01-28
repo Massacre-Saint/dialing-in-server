@@ -2,7 +2,7 @@
 from rest_framework.viewsets import ViewSet
 from rest_framework.response import Response
 from rest_framework import serializers,status
-from dialinginapi.models import Owner, User, Recipe, RecipeEquipment, Step
+from dialinginapi.models import Owner, User, Recipe, RecipeEquipment, Step, Favorite
 
 class OwnerView(ViewSet):
     """Class creates viewset for Favorite"""
@@ -87,7 +87,7 @@ class OwnerView(ViewSet):
 
         owner = Owner.objects.create(
             user_id = user,
-            recipe_id = recipe
+            recipe_id = recipe,
         )
         serializer = OwnerSerializer(owner)
         return Response(serializer.data)
@@ -99,18 +99,23 @@ class OwnerView(ViewSet):
             rquest (_type_): _description_
             pk (_type_): _description_
         """
-        owner = Owner.objects.get(pk=pk)
-        recipe = Recipe.objects.get(pk = owner.recipe_id_id)
-        
+        recipe = Recipe.objects.get(pk =pk)
+        owner = Owner.objects.get(recipe_id_id=recipe)
+
         equip = RecipeEquipment.objects.all()
         recipe_equip = equip.filter(recipe_id_id = recipe)
         if len(recipe_equip) > 0:
             recipe_equip.delete()
-        
+
         steps = Step.objects.all()
         recipe_steps = steps.filter(recipe_id_id = recipe)
         if len(recipe_steps) > 0:
             recipe_steps.delete()
+
+        favorites = Favorite.objects.all()
+        recipe_fav = favorites.filter(recipe_id_id = recipe)
+        if len(recipe_fav) > 0:
+            recipe_fav.delete()
         recipe.delete()
         owner.delete()
         return Response(None, status=status.HTTP_204_NO_CONTENT)

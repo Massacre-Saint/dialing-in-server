@@ -62,14 +62,13 @@ class RecipeView(ViewSet):
                 recipe = Recipe.objects.create (
                     default = False,
                     method_id = method,
-                    published = False
+                    published = False,
                 )
             serializer = RecipeSerializer(recipe)
-
+            return Response(serializer.data)
         recipe = Recipe.objects.create (
             default = False,
             published = False,
-            
         )
         serializer = RecipeSerializer(recipe)
         return Response(serializer.data)
