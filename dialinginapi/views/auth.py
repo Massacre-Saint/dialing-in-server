@@ -19,7 +19,7 @@ def check_user(request):
           'id': user.id,
           'uid': user.uid,
           'image_url': user.image_url,
-          'name': user.name
+          'name': user.name,
         }
         return Response(data)
 

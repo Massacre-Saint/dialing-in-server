@@ -56,7 +56,7 @@ class FavoriteView(ViewSet):
 
         favorite = Favorite.objects.create(
             user_id = user,
-            recipe_id = recipe
+            recipe_id = recipe,
         )
         serializer = FavoriteSerializer(favorite)
         return Response(serializer.data)

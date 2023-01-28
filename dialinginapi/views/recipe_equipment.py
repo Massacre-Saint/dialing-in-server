@@ -48,7 +48,7 @@ class RecipeEquipmentView(ViewSet):
             type = request.data['type'],
             name = request.data['name'],
             setting = request.data['setting'],
-            recipe_id = recipe
+            recipe_id = recipe,
         )
         serializer = RecipeEquipmentSerializer(recipe_equip)
         return Response(serializer.data)
@@ -68,6 +68,16 @@ class RecipeEquipmentView(ViewSet):
 
         return Response(None, status=status.HTTP_204_NO_CONTENT)
 
+    def destroy(self, request,pk):
+        """_summary_
+
+        Args:
+            request (_type_): _description_
+            pk (_type_): _description_
+        """
+        equip = RecipeEquipment.objects.get(pk=pk)
+        equip.delete()
+        return Response(None, status=status.HTTP_204_NO_CONTENT)
 class RecipeEquipmentSerializer(serializers.ModelSerializer):
     """Serilizer for Method Class"""
     class Meta:
