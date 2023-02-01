@@ -72,7 +72,7 @@ class RecipeView(ViewSet):
         )
         serializer = RecipeSerializer(recipe)
         return Response(serializer.data)
-    
+
     def update(self, request, pk):
         """_summary_
 
