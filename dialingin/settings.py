@@ -47,7 +47,8 @@ INSTALLED_APPS = [
 CORS_ORIGIN_WHITELIST = (
     'http://localhost:3000',
     'http://127.0.0.1:8000',
-    'https://dialing-in-a9734ad5bb51.herokuapp.com'
+    'https://dialing-in-a9734ad5bb51.herokuapp.com',
+    'https://dialing-in.netlify.app'
 )
 
 MIDDLEWARE = [
